@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Fiestas de Cumpleaños | S&S Eventos</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #ffffff;
+            color: #4b3941;
+        }
+
+        /* =========================
+           BARRA DE NAVEGACIÓN
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+
+            background: #fff1f5;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #5c4650;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #5c4650;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #bd718f;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            margin-top: 75px;
+
+            height: 78vh;
+            min-height: 550px;
+
+            background:
+                linear-gradient(
+                    rgba(80,45,58,0.30),
+                    rgba(80,45,58,0.30)
+                ),
+                url("images/cumpleanos/cumple1.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .hero-contenido {
+            width: 100%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 0 7%;
+
+            color: white;
+        }
+
+        .hero-contenido h1 {
+            font-family: 'Cinzel', serif;
+
+            font-size: clamp(40px, 6vw, 75px);
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            line-height: 1.1;
+        }
+
+        .hero-contenido p {
+            font-size: 18px;
+
+            max-width: 600px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+
+            background: #d89ab4;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #bd718f;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           INTRODUCCIÓN
+        ========================= */
+
+        .intro {
+            padding: 90px 7%;
+
+            text-align: center;
+
+            background: #fff7f9;
+        }
+
+        .intro h2 {
+            font-family: 'Cinzel', serif;
+
+            font-size: 36px;
+
+            color: #5c4650;
+
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            max-width: 850px;
+
+            margin: auto;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            color: #6b5960;
+        }
+
+        /* =========================
+           GALERÍA
+        ========================= */
+
+        .galeria-section {
+            padding: 90px 7%;
+
+            background: #ffffff;
+        }
+
+        .galeria-titulo {
+            font-family: 'Cinzel', serif;
+
+            text-align: center;
+
+            font-size: 36px;
+
+            color: #5c4650;
+
+            margin-bottom: 45px;
+        }
+
+        .galeria-cumpleanos {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .foto-cumple {
+            position: relative;
+
+            height: 280px;
+
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 25px
+                rgba(80,45,58,0.10);
+        }
+
+        .foto-cumple img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .foto-cumple:hover img {
+            transform: scale(1.06);
+        }
+
+        /* =========================
+           VER MÁS
+        ========================= */
+
+        .ver-mas::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(60,35,48,0.55);
+        }
+
+        .ver-mas-contenido {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 2;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .ver-mas-icono {
+            width: 55px;
+            height: 55px;
+
+            border: 2px solid white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 34px;
+
+            font-weight: 300;
+
+            margin-bottom: 15px;
+        }
+
+        .ver-mas-texto {
+            font-family: 'Cinzel', serif;
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+        }
+
+        .ver-mas-subtexto {
+            font-size: 13px;
+
+            opacity: 0.9;
+        }
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        .servicios {
+            padding: 90px 7%;
+
+            background: #fff1f5;
+        }
+
+        .servicios h2 {
+            font-family: 'Cinzel', serif;
+
+            text-align: center;
+
+            font-size: 36px;
+
+            color: #5c4650;
+
+            margin-bottom: 50px;
+        }
+
+        .servicios-grid {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .servicio {
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(80,45,58,0.07);
+        }
+
+        .servicio h3 {
+            font-family: 'Cinzel', serif;
+
+            color: #5c4650;
+
+            font-size: 21px;
+
+            margin-bottom: 15px;
+        }
+
+        .servicio p {
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: #6b5960;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+            padding: 90px 7%;
+
+            text-align: center;
+
+            background: #ffffff;
+        }
+
+        .contacto h2 {
+            font-family: 'Cinzel', serif;
+
+            font-size: 36px;
+
+            color: #5c4650;
+
+            margin-bottom: 20px;
+        }
+
+        .contacto p {
+            max-width: 700px;
+
+            margin: 0 auto 30px;
+
+            line-height: 1.8;
+
+            color: #6b5960;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #fff1f5;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            color: #6b5960;
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           VISOR / LIGHTBOX
+        ========================= */
+
+        .visor {
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(20,12,16,0.94);
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+        }
+
+        .visor.activo {
+            display: flex;
+        }
+
+        .visor-imagen {
+            max-width: 90vw;
+            max-height: 85vh;
+
+            object-fit: contain;
+
+            border-radius: 6px;
+
+            box-shadow:
+                0 10px 40px
+                rgba(0,0,0,0.4);
+        }
+
+        .visor-cerrar {
+            position: absolute;
+
+            top: 20px;
+            right: 30px;
+
+            color: white;
+
+            font-size: 38px;
+
+            cursor: pointer;
+
+            z-index: 3;
+        }
+
+        .visor-anterior,
+        .visor-siguiente {
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(255,255,255,0.6);
+
+            background:
+                rgba(255,255,255,0.12);
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.3s;
+        }
+
+        .visor-anterior:hover,
+        .visor-siguiente:hover {
+            background:
+                rgba(255,255,255,0.25);
+        }
+
+        .visor-anterior {
+            left: 30px;
+        }
+
+        .visor-siguiente {
+            right: 30px;
+        }
+
+        .visor-contador {
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero-contenido {
+                padding: 0 5%;
+            }
+
+            .galeria-cumpleanos {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .servicios-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                height: 65px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                margin-top: 65px;
+
+                height: 70vh;
+                min-height: 500px;
+
+                background-position: center;
+            }
+
+            .hero-contenido h1 {
+                font-size: 42px;
+            }
+
+            .hero-contenido p {
+                font-size: 15px;
+            }
+
+            .intro,
+            .galeria-section,
+            .servicios,
+            .contacto {
+                padding: 65px 5%;
+            }
+
+            .intro h2,
+            .galeria-titulo,
+            .servicios h2,
+            .contacto h2 {
+                font-size: 28px;
+            }
+
+            .galeria-cumpleanos {
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+            .foto-cumple {
+                height: 250px;
+            }
+
+            .visor {
+                padding: 20px;
+            }
+
+            .visor-imagen {
+                max-width: 94vw;
+                max-height: 78vh;
+            }
+
+            .visor-anterior,
+            .visor-siguiente {
+                width: 42px;
+                height: 42px;
+
+                font-size: 22px;
+            }
+
+            .visor-anterior {
+                left: 10px;
+            }
+
+            .visor-siguiente {
+                right: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVEGACIÓN
+    ========================= -->
+
+    <nav>
+
+        <a
+            href="index.html"
+            class="logo">
+            S&S Eventos
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="bodas.html">
+                    Bodas
+                </a>
+            </li>
+
+            <li>
+                <a href="cumpleanos.html">
+                    Cumpleaños
+                </a>
+            </li>
+
+            <li>
+                <a href="xv.html">
+                    XV Años
+                </a>
+            </li>
+
+            <li>
+                <a href="religiosos.html">
+                    Religiosos
+                </a>
+            </li>
+
+            <li>
+                <a href="grados.html">
+                    Grados
+                </a>
+            </li>
+
+            <li>
+                <a href="corporativos.html">
+                    Corporativos
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-contenido">
+
+            <h1>
+                Fiestas de<br>
+                Cumpleaños
+            </h1>
+
+            <p>
+                Creamos celebraciones llenas de alegría,
+                detalles y momentos especiales para festejar
+                cada cumpleaños de una manera única.
+            </p>
+
+            <a
+                href="#contacto"
+                class="boton">
+                Planeemos tu celebración
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRODUCCIÓN
+    ========================= -->
+
+    <section class="intro">
+
+        <h2>
+            Celebramos contigo
+        </h2>
+
+        <p>
+            En S&S Eventos nos encargamos de crear
+            fiestas de cumpleaños personalizadas,
+            pensadas de acuerdo con tus gustos,
+            estilo y la ocasión. Desde la organización
+            hasta la decoración, cuidamos cada detalle
+            para convertir tu celebración en un recuerdo
+            inolvidable.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================= -->
+
+    <section class="galeria-section">
+
+        <h2 class="galeria-titulo">
+            Nuestros eventos
+        </h2>
+
+        <div class="galeria-cumpleanos">
+
+
+            <div
+                class="foto-cumple"
+                onclick="abrirVisor(0)">
+
+                <img
+                    src="images/cumpleanos/cumple2.jpg"
+                    alt="Fiesta de cumpleaños">
+
+            </div>
+
+
+            <div
+                class="foto-cumple"
+                onclick="abrirVisor(1)">
+
+                <img
+                    src="images/cumpleanos/cumple3.jpg"
+                    alt="Celebración de cumpleaños">
+
+            </div>
+
+
+            <div
+                class="foto-cumple"
+                onclick="abrirVisor(2)">
+
+                <img
+                    src="images/cumpleanos/cumple4.jpg"
+                    alt="Decoración de cumpleaños">
+
+            </div>
+
+
+            <div
+                class="foto-cumple"
+                onclick="abrirVisor(3)">
+
+                <img
+                    src="images/cumpleanos/cumple5.jpg"
+                    alt="Evento de cumpleaños">
+
+            </div>
+
+
+            <div
+                class="foto-cumple"
+                onclick="abrirVisor(4)">
+
+                <img
+                    src="images/cumpleanos/cumple6.jpg"
+                    alt="Fiesta personalizada">
+
+            </div>
+
+
+            <div
+                class="foto-cumple ver-mas"
+                onclick="abrirVisor(5)">
+
+                <img
+                    src="images/cumpleanos/cumple7.jpg"
+                    alt="Más fotografías de cumpleaños">
+
+
+                <div class="ver-mas-contenido">
+
+                    <div class="ver-mas-icono">
+                        +
+                    </div>
+
+                    <div class="ver-mas-texto">
+                        Ver más fotos
+                    </div>
+
+                    <div class="ver-mas-subtexto">
+                        Descubre nuestra galería
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
+    <section class="servicios">
+
+        <h2>
+            Lo hacemos realidad
+        </h2>
+
+        <div class="servicios-grid">
+
+
+            <div class="servicio">
+
+                <h3>
+                    Organización
+                </h3>
+
+                <p>
+                    Planificamos cada parte de tu fiesta
+                    para que puedas disfrutar de tu
+                    celebración sin preocupaciones.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <h3>
+                    Decoración
+                </h3>
+
+                <p>
+                    Creamos ambientes personalizados
+                    con decoraciones pensadas para
+                    reflejar el estilo y personalidad
+                    de cada celebración.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <h3>
+                    Personalización
+                </h3>
+
+                <p>
+                    Adaptamos cada detalle de la fiesta
+                    a tus gustos, ideas y necesidades
+                    para conseguir una celebración única.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section
+        class="contacto"
+        id="contacto">
+
+        <h2>
+            Planeemos tu cumpleaños
+        </h2>
+
+        <p>
+            Cuéntanos cómo imaginas tu celebración
+            y nuestro equipo estará listo para ayudarte
+            a organizar una fiesta de cumpleaños especial,
+            personalizada y llena de momentos inolvidables.
+        </p>
+
+        <a
+            href="#"
+            class="boton"
+            id="whatsappBtn">
+
+            Escríbenos por WhatsApp
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 S&S Eventos ·
+        Creamos momentos, celebramos recuerdos.
+
+    </footer>
+
+
+    <!-- =========================
+         VISOR
+    ========================= -->
+
+    <div
+        class="visor"
+        id="visor"
+        onclick="cerrarSiFondo(event)">
+
+
+        <span
+            class="visor-cerrar"
+            onclick="cerrarVisor()">
+            ×
+        </span>
+
+
+        <button
+            class="visor-anterior"
+            onclick="event.stopPropagation(); cambiarImagen(-1)">
+            ‹
+        </button>
+
+
+        <img
+            class="visor-imagen"
+            id="visorImagen"
+            src=""
+            alt="Fotografía de cumpleaños">
+
+
+        <button
+            class="visor-siguiente"
+            onclick="event.stopPropagation(); cambiarImagen(1)">
+            ›
+        </button>
+
+
+        <div
+            class="visor-contador"
+            id="visorContador">
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           GALERÍA
+        ========================= */
+
+        const imagenesCumpleanos = [
+
+            "images/cumpleanos/cumple2.jpg",
+
+            "images/cumpleanos/cumple3.jpg",
+
+            "images/cumpleanos/cumple4.jpg",
+
+            "images/cumpleanos/cumple5.jpg",
+
+            "images/cumpleanos/cumple6.jpg",
+
+            "images/cumpleanos/cumple7.jpg",
+
+            "images/cumpleanos/cumple8.jpg",
+
+            "images/cumpleanos/cumple9.jpg",
+
+            "images/cumpleanos/cumple10.jpg",
+
+            "images/cumpleanos/cumple11.jpg",
+
+            "images/cumpleanos/cumple12.jpg",
+
+            "images/cumpleanos/cumple13.jpg"
+
+        ];
+
+
+        let imagenActual = 0;
+
+
+        function abrirVisor(indice) {
+
+            imagenActual = indice;
+
+            document
+                .getElementById("visor")
+                .classList
+                .add("activo");
+
+            document.body.style.overflow = "hidden";
+
+            actualizarVisor();
+
+        }
+
+
+        function actualizarVisor() {
+
+            document
+                .getElementById("visorImagen")
+                .src =
+                imagenesCumpleanos[imagenActual];
+
+
+            document
+                .getElementById("visorContador")
+                .textContent =
+                (imagenActual + 1) +
+                " / " +
+                imagenesCumpleanos.length;
+
+        }
+
+
+        function cambiarImagen(direccion) {
+
+            imagenActual += direccion;
+
+
+            if (
+                imagenActual < 0
+            ) {
+
+                imagenActual =
+                    imagenesCumpleanos.length - 1;
+
+            }
+
+
+            if (
+                imagenActual >=
+                imagenesCumpleanos.length
+            ) {
+
+                imagenActual = 0;
+
+            }
+
+
+            actualizarVisor();
+
+        }
+
+
+        function cerrarVisor() {
+
+            document
+                .getElementById("visor")
+                .classList
+                .remove("activo");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        function cerrarSiFondo(event) {
+
+            if (
+                event.target.id === "visor"
+            ) {
+
+                cerrarVisor();
+
+            }
+
+        }
+
+
+        /* =========================
+           TECLADO
+        ========================= */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                const visor =
+                    document.getElementById("visor");
+
+
+                if (
+                    !visor.classList.contains("activo")
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+
+                    cambiarImagen(1);
+
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    cambiarImagen(-1);
+
+                }
+
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    cerrarVisor();
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           SWIPE MÓVIL
+        ========================= */
+
+        let touchInicioX = 0;
+
+
+        document
+            .getElementById("visor")
+            .addEventListener(
+                "touchstart",
+                function(event) {
+
+                    touchInicioX =
+                        event.changedTouches[0].screenX;
+
+                }
+            );
+
+
+        document
+            .getElementById("visor")
+            .addEventListener(
+                "touchend",
+                function(event) {
+
+                    const touchFinalX =
+                        event.changedTouches[0].screenX;
+
+                    const diferencia =
+                        touchFinalX -
+                        touchInicioX;
+
+
+                    if (
+                        Math.abs(diferencia) < 50
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (diferencia < 0) {
+
+                        cambiarImagen(1);
+
+                    } else {
+
+                        cambiarImagen(-1);
+
+                    }
+
+                }
+            );
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        const numeroWhatsApp =
+            "593995665348";
+
+
+        const mensajeWhatsApp =
+            "Hola, S&S Eventos. Me gustaría recibir información sobre la organización de una fiesta de cumpleaños. 🎂✨";
+
+
+        document
+            .getElementById("whatsappBtn")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    const url =
+                        "https://wa.me/" +
+                        numeroWhatsApp +
+                        "?text=" +
+                        encodeURIComponent(
+                            mensajeWhatsApp
+                        );
+
+
+                    window.open(
+                        url,
+                        "_blank"
+                    );
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

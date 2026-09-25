@@ -1,0 +1,2167 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XV Años | S&S Eventos</title>
+
+
+    <!-- =========================================
+         FUENTES
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+
+        /* =========================================
+           GENERAL
+        ========================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background: #fffafb;
+
+            color: #4a3b40;
+
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================== */
+
+        nav {
+
+            width: 100%;
+
+            min-height: 75px;
+
+            background: #fff1f5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 2px 12px rgba(0,0,0,0.06);
+
+        }
+
+
+        .logo {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 25px;
+
+            font-weight: 600;
+
+            color: #7d5664;
+
+            text-decoration: none;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .menu {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .menu a {
+
+            text-decoration: none;
+
+            color: #604d54;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+
+        }
+
+
+        .menu a:hover {
+
+            color: #c77d99;
+
+        }
+
+
+        /* =========================================
+           WHATSAPP
+        ========================================== */
+
+        .btn-whatsapp {
+
+            background: #d89ab4;
+
+            color: white !important;
+
+            padding: 11px 20px;
+
+            border-radius: 25px;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .btn-whatsapp:hover {
+
+            background: #bd718f;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================================
+           PORTADA
+           
+           xv1.jpg SOLO AQUÍ
+        ========================================== */
+
+        .hero {
+
+            height: 75vh;
+
+            min-height: 550px;
+
+            margin-top: 75px;
+
+            background:
+
+                linear-gradient(
+                    rgba(80,45,58,0.30),
+                    rgba(80,45,58,0.30)
+                ),
+
+                url("images/xv/xv1.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+            padding: 30px;
+
+        }
+
+
+        .hero h1 {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: clamp(
+                42px,
+                7vw,
+                80px
+            );
+
+            font-weight: 500;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 3px 15px rgba(0,0,0,0.25);
+
+        }
+
+
+        .hero p {
+
+            font-size: 18px;
+
+            font-weight: 300;
+
+            letter-spacing: 1px;
+
+            max-width: 680px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================== */
+
+        .intro {
+
+            padding:
+                90px 10% 70px;
+
+            text-align: center;
+
+            background: #fffafb;
+
+        }
+
+
+        .intro h2 {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 38px;
+
+            color: #765561;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .linea {
+
+            width: 70px;
+
+            height: 2px;
+
+            background: #d89ab4;
+
+            margin:
+                0 auto 30px;
+
+        }
+
+
+        .intro p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            color: #76666b;
+
+        }
+
+
+        /* =========================================
+           GALERÍA
+        ========================================== */
+
+        .galeria-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                95px 7% 110px;
+
+            background: #f8dce6;
+
+        }
+
+
+        .galeria-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+
+            height: 300px;
+
+            top: -130px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            filter:
+                blur(65px);
+
+            z-index: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        .galeria-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            bottom: -200px;
+
+            right: -120px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            filter:
+                blur(75px);
+
+            z-index: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        .galeria-titulo {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 34px;
+
+            color: #765561;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        /* =========================================
+           GRID DE FOTOS
+        ========================================== */
+
+        .galeria-xv {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================
+           FOTO
+        ========================================== */
+
+        .foto-xv {
+
+            height: 330px;
+
+            overflow: hidden;
+
+            border-radius: 14px;
+
+            background: #f5e9ed;
+
+            box-shadow:
+                0 8px 25px
+                rgba(90,55,65,0.13);
+
+            position: relative;
+
+            cursor: pointer;
+
+        }
+
+
+        .foto-xv img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.5s ease;
+
+        }
+
+
+        .foto-xv:hover img {
+
+            transform:
+                scale(1.06);
+
+        }
+
+
+        /* =========================================
+           SEXTA FOTO
+           
+           + VER MÁS
+        ========================================== */
+
+        .ver-mas {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .ver-mas img {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            filter:
+                brightness(0.38)
+                saturate(0.75);
+
+        }
+
+
+        .ver-mas-contenido {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            color: white;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+        .ver-mas-icono {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            border:
+                2px solid
+                rgba(255,255,255,0.9);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 42px;
+
+            font-weight: 200;
+
+            background:
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .ver-mas-texto {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .ver-mas-subtexto {
+
+            font-size: 12px;
+
+            opacity: 0.85;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =========================================
+           VISOR PANTALLA COMPLETA
+        ========================================== */
+
+        .visor {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(20,15,18,0.97);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 9999;
+
+            padding: 30px;
+
+            touch-action: pan-y;
+
+        }
+
+
+        .visor.activo {
+
+            display: flex;
+
+        }
+
+
+        .imagen-grande {
+
+            max-width: 90vw;
+
+            max-height: 88vh;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 10px 40px
+                rgba(0,0,0,0.5);
+
+            user-select: none;
+
+            -webkit-user-drag: none;
+
+        }
+
+
+        /* =========================================
+           CERRAR
+        ========================================== */
+
+        .cerrar {
+
+            position: absolute;
+
+            top: 25px;
+
+            right: 35px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            color: white;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            z-index: 10;
+
+            transition: 0.3s;
+
+        }
+
+
+        .cerrar:hover {
+
+            background:
+                rgba(255,255,255,0.25);
+
+            transform:
+                rotate(90deg);
+
+        }
+
+
+        /* =========================================
+           FLECHAS
+        ========================================== */
+
+        .flecha {
+
+            position: absolute;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            width: 55px;
+
+            height: 55px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.13);
+
+            color: white;
+
+            font-size: 35px;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 10;
+
+            transition: 0.3s;
+
+        }
+
+
+        .flecha:hover {
+
+            background:
+                rgba(255,255,255,0.28);
+
+            transform:
+                translateY(-50%)
+                scale(1.08);
+
+        }
+
+
+        .flecha-izquierda {
+
+            left: 30px;
+
+        }
+
+
+        .flecha-derecha {
+
+            right: 30px;
+
+        }
+
+
+        /* =========================================
+           CONTADOR
+        ========================================== */
+
+        .contador {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            color:
+                rgba(255,255,255,0.85);
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        /* =========================================
+           SERVICIOS
+        ========================================== */
+
+        .servicio {
+
+            padding:
+                90px 10%;
+
+            background: #fdf0f4;
+
+            text-align: center;
+
+        }
+
+
+        .servicio h2 {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 36px;
+
+            color: #765561;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .servicio > p {
+
+            max-width: 800px;
+
+            margin:
+                0 auto 40px;
+
+            line-height: 1.9;
+
+            color: #76666b;
+
+        }
+
+
+        .caracteristicas {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .caracteristica {
+
+            background: white;
+
+            padding:
+                35px 25px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(0,0,0,0.06);
+
+        }
+
+
+        .caracteristica h3 {
+
+            font-family: 'Cinzel', serif;
+
+            color: #9b687d;
+
+            margin-bottom: 12px;
+
+            font-size: 20px;
+
+        }
+
+
+        .caracteristica p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           CONTACTO
+        ========================================== */
+
+        .contacto {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                100px 20px;
+
+            text-align: center;
+
+            background: #f8dce6;
+
+        }
+
+
+        .contacto::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+
+            height: 300px;
+
+            top: -130px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            filter:
+                blur(65px);
+
+            z-index: 0;
+
+        }
+
+
+        .contacto h2 {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 38px;
+
+            color: #765561;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .contacto p {
+
+            position: relative;
+
+            z-index: 2;
+
+            color: #76666b;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .contacto a {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: inline-block;
+
+            background: #d89ab4;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding:
+                15px 30px;
+
+            border-radius: 30px;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .contacto a:hover {
+
+            background: #bd718f;
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+
+            background: #fff1f5;
+
+            padding:
+                30px 20px;
+
+            text-align: center;
+
+            color: #806b73;
+
+            font-size: 13px;
+
+        }
+
+
+        footer strong {
+
+            font-family: 'Cinzel', serif;
+
+            color: #765561;
+
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+
+                padding: 0 4%;
+
+            }
+
+
+            .menu {
+
+                gap: 15px;
+
+            }
+
+
+            .menu a {
+
+                font-size: 12px;
+
+            }
+
+
+            .galeria-xv {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .caracteristicas {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================== */
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                min-height: 70px;
+
+                padding:
+                    15px 20px;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            .menu {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px;
+
+            }
+
+
+            .btn-whatsapp {
+
+                padding:
+                    8px 14px;
+
+            }
+
+
+            .hero {
+
+                margin-top: 115px;
+
+                min-height: 500px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 15px;
+
+            }
+
+
+            .intro h2,
+            .contacto h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            .galeria-section {
+
+                padding:
+                    80px 7%;
+
+                background: #f8dce6;
+
+            }
+
+
+            .galeria-xv {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .foto-xv {
+
+                height: 300px;
+
+            }
+
+
+            .imagen-grande {
+
+                max-width: 82vw;
+
+                max-height: 78vh;
+
+            }
+
+
+            .flecha {
+
+                width: 45px;
+
+                height: 45px;
+
+                font-size: 28px;
+
+            }
+
+
+            .flecha-izquierda {
+
+                left: 8px;
+
+            }
+
+
+            .flecha-derecha {
+
+                right: 8px;
+
+            }
+
+
+            .cerrar {
+
+                top: 15px;
+
+                right: 15px;
+
+                width: 40px;
+
+                height: 40px;
+
+                font-size: 25px;
+
+            }
+
+
+            .contacto {
+
+                padding:
+                    85px 20px;
+
+                background: #f8dce6;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav>
+
+
+        <a
+            href="index.html"
+            class="logo">
+
+            S&S EVENTOS
+
+        </a>
+
+
+        <div class="menu">
+
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <a href="index.html#servicios">
+                Servicios
+            </a>
+
+
+            <a href="index.html#nosotros">
+                Nosotros
+            </a>
+
+
+            <a
+                href="#"
+                class="btn-whatsapp"
+                onclick="abrirWhatsApp(event)">
+
+                WhatsApp
+
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- =========================================
+         PORTADA
+         
+         xv1.jpg
+         NO SE REPITE EN GALERÍA
+    ========================================== -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+
+            <h1>
+                XV Años
+            </h1>
+
+
+            <p>
+
+                Una celebración única para
+                convertir tus sueños en recuerdos
+                inolvidables.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================== -->
+
+    <section class="intro">
+
+
+        <h2>
+            Un momento para celebrar
+        </h2>
+
+
+        <div class="linea"></div>
+
+
+        <p>
+
+            En S&S Eventos hacemos de tus XV años
+            una experiencia especial y llena de
+            detalles.
+
+            Diseñamos ambientes personalizados,
+            elegantes y llenos de personalidad
+            para celebrar esta etapa tan importante.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         GALERÍA
+    ========================================== -->
+
+    <section class="galeria-section">
+
+
+        <h2 class="galeria-titulo">
+
+            Nuestros eventos
+
+        </h2>
+
+
+        <div class="galeria-xv">
+
+
+            <!-- FOTO 1 -->
+
+            <div
+                class="foto-xv"
+                onclick="abrirVisor(0)">
+
+                <img
+                    src="images/xv/xv2.jpg"
+                    alt="Decoración de XV años">
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+
+            <div
+                class="foto-xv"
+                onclick="abrirVisor(1)">
+
+                <img
+                    src="images/xv/xv3.jpg"
+                    alt="Fiesta de XV años">
+
+            </div>
+
+
+            <!-- FOTO 3 -->
+
+            <div
+                class="foto-xv"
+                onclick="abrirVisor(2)">
+
+                <img
+                    src="images/xv/xv4.jpg"
+                    alt="Decoración de quinceañera">
+
+            </div>
+
+
+            <!-- FOTO 4 -->
+
+            <div
+                class="foto-xv"
+                onclick="abrirVisor(3)">
+
+                <img
+                    src="images/xv/xv5.jpg"
+                    alt="Evento de XV años">
+
+            </div>
+
+
+            <!-- FOTO 5 -->
+
+            <div
+                class="foto-xv"
+                onclick="abrirVisor(4)">
+
+                <img
+                    src="images/xv/xv6.jpg"
+                    alt="Recepción de XV años">
+
+            </div>
+
+
+            <!-- =================================
+                 FOTO 6 = VER MÁS
+            ================================== -->
+
+            <div
+                class="foto-xv ver-mas"
+                onclick="abrirVisor(5)">
+
+
+                <img
+                    src="images/xv/xv7.jpg"
+                    alt="Más fotografías de XV años">
+
+
+                <div class="ver-mas-contenido">
+
+
+                    <div class="ver-mas-icono">
+                        +
+                    </div>
+
+
+                    <div class="ver-mas-texto">
+                        Ver más fotos
+                    </div>
+
+
+                    <div class="ver-mas-subtexto">
+                        Descubre nuestra galería
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         VISOR
+    ========================================== -->
+
+    <div
+        class="visor"
+        id="visor"
+        onclick="cerrarSiFondo(event)">
+
+
+        <button
+            class="cerrar"
+            onclick="cerrarVisor()">
+
+            ×
+
+        </button>
+
+
+        <button
+            class="flecha flecha-izquierda"
+            onclick="imagenAnterior(event)">
+
+            &#10094;
+
+        </button>
+
+
+        <img
+            class="imagen-grande"
+            id="imagenGrande"
+            src=""
+            alt="Fotografía de XV años">
+
+
+        <button
+            class="flecha flecha-derecha"
+            onclick="imagenSiguiente(event)">
+
+            &#10095;
+
+        </button>
+
+
+        <div
+            class="contador"
+            id="contador">
+
+            1 / 15
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         SERVICIOS
+    ========================================== -->
+
+    <section class="servicio">
+
+
+        <h2>
+            Diseñamos tus XV años
+        </h2>
+
+
+        <p>
+
+            Nos encargamos de crear una celebración
+            personalizada para que disfrutes cada
+            momento junto a tus familiares y amigos.
+
+        </p>
+
+
+        <div class="caracteristicas">
+
+
+            <div class="caracteristica">
+
+
+                <h3>
+                    Decoración
+                </h3>
+
+
+                <p>
+
+                    Creamos ambientes personalizados
+                    de acuerdo con el estilo, colores
+                    y personalidad de la quinceañera.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="caracteristica">
+
+
+                <h3>
+                    Organización
+                </h3>
+
+
+                <p>
+
+                    Coordinamos todos los detalles
+                    para que tu celebración sea
+                    especial y memorable.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="caracteristica">
+
+
+                <h3>
+                    Personalización
+                </h3>
+
+
+                <p>
+
+                    Cada celebración es diferente.
+                    Diseñamos cada espacio pensando
+                    en tus gustos y sueños.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACTO
+    ========================================== -->
+
+    <section class="contacto">
+
+
+        <h2>
+            ¿Planeamos tus XV?
+        </h2>
+
+
+        <p>
+
+            Cuéntanos cómo imaginas tu celebración
+            y hagamos realidad ese día especial.
+
+        </p>
+
+
+        <a
+            href="#"
+            onclick="abrirWhatsApp(event)">
+
+            Contactarnos por WhatsApp
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+
+        <p>
+
+            © 2026
+
+            <strong>
+                S&S Eventos
+            </strong>
+
+            . Todos los derechos reservados.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           WHATSAPP
+        ========================================== */
+
+        const numeroWhatsApp =
+            "593995665348";
+
+
+        /* =========================================
+           MENSAJE AUTOMÁTICO PARA XV
+        ========================================== */
+
+        const mensajeWhatsApp =
+            "Hola, me gustaría obtener información sobre el servicio de XV años. 👑✨";
+
+
+        /* =========================================
+           ABRIR WHATSAPP
+        ========================================== */
+
+        function abrirWhatsApp(event) {
+
+
+            event.preventDefault();
+
+
+            const url =
+
+                "https://wa.me/" +
+
+                numeroWhatsApp +
+
+                "?text=" +
+
+                encodeURIComponent(
+                    mensajeWhatsApp
+                );
+
+
+            window.open(
+                url,
+                "_blank"
+            );
+
+        }
+
+
+        /* =========================================
+           15 IMÁGENES DE GALERÍA
+           
+           xv1.jpg = PORTADA
+           
+           xv2.jpg - xv16.jpg = GALERÍA
+        ========================================== */
+
+        const imagenesXV = [
+
+            "images/xv/xv2.jpg",
+
+            "images/xv/xv3.jpg",
+
+            "images/xv/xv4.jpg",
+
+            "images/xv/xv5.jpg",
+
+            "images/xv/xv6.jpg",
+
+            "images/xv/xv7.jpg",
+
+            "images/xv/xv8.jpg",
+
+            "images/xv/xv9.jpg",
+
+            "images/xv/xv10.jpg",
+
+            "images/xv/xv11.jpg",
+
+            "images/xv/xv12.jpg",
+
+            "images/xv/xv13.jpg",
+
+            "images/xv/xv14.jpg",
+
+            "images/xv/xv15.jpg",
+
+            "images/xv/xv16.jpg"
+
+        ];
+
+
+        /* =========================================
+           FOTO ACTUAL
+        ========================================== */
+
+        let imagenActual = 0;
+
+
+        /* =========================================
+           VARIABLES PARA SWIPE
+        ========================================== */
+
+        let inicioX = 0;
+
+        let inicioY = 0;
+
+        let finalX = 0;
+
+        let finalY = 0;
+
+
+        /* =========================================
+           ABRIR VISOR
+        ========================================== */
+
+        function abrirVisor(indice) {
+
+
+            imagenActual = indice;
+
+
+            actualizarImagen();
+
+
+            const visor =
+                document.getElementById(
+                    "visor"
+                );
+
+
+            visor.classList.add(
+                "activo"
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =========================================
+           ACTUALIZAR IMAGEN
+        ========================================== */
+
+        function actualizarImagen() {
+
+
+            const imagenGrande =
+                document.getElementById(
+                    "imagenGrande"
+                );
+
+
+            const contador =
+                document.getElementById(
+                    "contador"
+                );
+
+
+            imagenGrande.src =
+                imagenesXV[imagenActual];
+
+
+            contador.textContent =
+
+                (imagenActual + 1)
+
+                + " / "
+
+                + imagenesXV.length;
+
+        }
+
+
+        /* =========================================
+           SIGUIENTE
+        ========================================== */
+
+        function imagenSiguiente(event) {
+
+
+            if (event) {
+
+                event.stopPropagation();
+
+            }
+
+
+            imagenActual++;
+
+
+            if (
+                imagenActual >=
+                imagenesXV.length
+            ) {
+
+                imagenActual = 0;
+
+            }
+
+
+            actualizarImagen();
+
+        }
+
+
+        /* =========================================
+           ANTERIOR
+        ========================================== */
+
+        function imagenAnterior(event) {
+
+
+            if (event) {
+
+                event.stopPropagation();
+
+            }
+
+
+            imagenActual--;
+
+
+            if (imagenActual < 0) {
+
+                imagenActual =
+                    imagenesXV.length - 1;
+
+            }
+
+
+            actualizarImagen();
+
+        }
+
+
+        /* =========================================
+           CERRAR VISOR
+        ========================================== */
+
+        function cerrarVisor() {
+
+
+            const visor =
+                document.getElementById(
+                    "visor"
+                );
+
+
+            visor.classList.remove(
+                "activo"
+            );
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =========================================
+           CERRAR TOCANDO FONDO
+        ========================================== */
+
+        function cerrarSiFondo(event) {
+
+
+            if (
+                event.target.id ===
+                "visor"
+            ) {
+
+                cerrarVisor();
+
+            }
+
+        }
+
+
+        /* =========================================
+           TOUCH START
+        ========================================== */
+
+        const visor =
+            document.getElementById(
+                "visor"
+            );
+
+
+        visor.addEventListener(
+            "touchstart",
+            function(event) {
+
+
+                const touch =
+                    event.changedTouches[0];
+
+
+                inicioX =
+                    touch.screenX;
+
+
+                inicioY =
+                    touch.screenY;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =========================================
+           TOUCH END
+        ========================================== */
+
+        visor.addEventListener(
+            "touchend",
+            function(event) {
+
+
+                const touch =
+                    event.changedTouches[0];
+
+
+                finalX =
+                    touch.screenX;
+
+
+                finalY =
+                    touch.screenY;
+
+
+                manejarDeslizamiento();
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =========================================
+           SWIPE
+        ========================================== */
+
+        function manejarDeslizamiento() {
+
+
+            const diferenciaX =
+                finalX - inicioX;
+
+
+            const diferenciaY =
+                finalY - inicioY;
+
+
+            if (
+                Math.abs(diferenciaY) >
+                Math.abs(diferenciaX)
+            ) {
+
+                return;
+
+            }
+
+
+            const distanciaMinima =
+                50;
+
+
+            /* DESLIZAR A LA IZQUIERDA */
+
+            if (
+                diferenciaX <
+                -distanciaMinima
+            ) {
+
+                imagenSiguiente();
+
+            }
+
+
+            /* DESLIZAR A LA DERECHA */
+
+            else if (
+                diferenciaX >
+                distanciaMinima
+            ) {
+
+                imagenAnterior();
+
+            }
+
+        }
+
+
+        /* =========================================
+           TECLADO
+        ========================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+
+                const visor =
+                    document.getElementById(
+                        "visor"
+                    );
+
+
+                if (
+                    !visor.classList.contains(
+                        "activo"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                /* ESC */
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    cerrarVisor();
+
+                }
+
+
+                /* DERECHA */
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+
+                    imagenSiguiente();
+
+                }
+
+
+                /* IZQUIERDA */
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    imagenAnterior();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>S&S Eventos | Eventos Corporativos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --rosa-fondo:#FFF9FC;
+    --rosa-claro:#F8DDE8;
+    --rosa-suave:#FCEEF3;
+    --rosa:#E8AFC3;
+    --rosa-medio:#D89AB4;
+    --rosa-oscuro:#B87898;
+    --rosa-profundo:#9C5F7D;
+    --lila:#DCC9E8;
+    --lila-claro:#F1EAF6;
+    --lila-suave:#F7F2F9;
+    --texto:#4A4147;
+    --titulo:#59445F;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--rosa-fondo);
+    color:var(--texto);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    background:rgba(255,249,252,0.96);
+    backdrop-filter:blur(10px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(100,70,90,0.08);
+}
+
+.logo{
+    font-family:"Cinzel",serif;
+    font-weight:700;
+    font-size:23px;
+    letter-spacing:2px;
+    color:var(--titulo);
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--texto);
+    font-family:"Cinzel",serif;
+    font-size:13px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--rosa-profundo);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:88vh;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(248,221,232,.92) 0%,
+            rgba(248,221,232,.70) 30%,
+            rgba(248,221,232,.28) 60%,
+            rgba(248,221,232,.04) 100%
+        ),
+        url("images/corporativos/corporativo1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 8% 80px;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-small{
+    font-family:"Cinzel",serif;
+    color:var(--rosa-profundo);
+    letter-spacing:3px;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    font-size:clamp(42px,6vw,75px);
+    line-height:1.05;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--rosa-medio);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-family:"Cinzel",serif;
+    font-size:13px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--rosa-oscuro);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    padding:90px 8%;
+    background:white;
+}
+
+.intro-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    align-items:center;
+}
+
+.intro-image{
+    height:460px;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(80,45,58,.12);
+}
+
+.intro-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.intro-text h2{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.intro-text p{
+    line-height:1.8;
+    margin-bottom:16px;
+}
+
+.intro-text strong{
+    color:var(--rosa-profundo);
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.services{
+    padding:85px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-suave),
+            var(--lila-suave)
+        );
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    display:block;
+    font-family:"Cinzel",serif;
+    color:var(--rosa-profundo);
+    font-size:13px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    font-size:38px;
+}
+
+.services-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:rgba(255,255,255,.82);
+    padding:30px 22px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid rgba(216,154,180,.25);
+    box-shadow:0 7px 20px rgba(80,45,58,.06);
+}
+
+.service-card h3{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria-section{
+    padding:90px 8%;
+    background:white;
+}
+
+.gallery{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:290px;
+    overflow:hidden;
+    border-radius:18px;
+    cursor:pointer;
+    position:relative;
+    box-shadow:0 8px 22px rgba(80,45,58,.10);
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(40,25,35,.25),
+        transparent 55%
+    );
+}
+
+/* VER MÁS */
+
+.more-item img{
+    filter:brightness(.58);
+}
+
+.more-content{
+    position:absolute;
+    inset:0;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+}
+
+.more-plus{
+    width:65px;
+    height:65px;
+
+    border:2px solid white;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.more-content span{
+    font-family:"Cinzel",serif;
+    font-size:16px;
+}
+
+/* =========================
+   PROCESO
+========================= */
+
+.process{
+    padding:90px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lila-suave),
+            var(--rosa-suave)
+        );
+}
+
+.process-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.process-card{
+    background:white;
+    padding:30px 25px;
+    border-radius:18px;
+    text-align:center;
+
+    box-shadow:0 7px 20px rgba(80,45,58,.06);
+}
+
+.process-number{
+    font-family:"Cinzel",serif;
+    font-size:30px;
+    color:var(--rosa-medio);
+    margin-bottom:10px;
+}
+
+.process-card h3{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    margin-bottom:10px;
+}
+
+.process-card p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact{
+    padding:90px 8%;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-claro),
+            var(--lila-claro)
+        );
+}
+
+.contact h2{
+    font-family:"Cinzel",serif;
+    color:var(--titulo);
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin-bottom:30px;
+    font-size:17px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:28px 20px;
+    text-align:center;
+    background:#FFF5F9;
+    color:#756870;
+    font-size:13px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#25D366;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    font-size:28px;
+
+    z-index:2000;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.20);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+
+    background:rgba(25,18,23,.96);
+
+    z-index:5000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:60px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90vw;
+    max-height:82vh;
+    object-fit:contain;
+    border-radius:8px;
+}
+
+.close{
+    position:absolute;
+    top:18px;
+    right:25px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+    font-size:34px;
+
+    cursor:pointer;
+}
+
+.arrow.left{
+    left:25px;
+}
+
+.arrow.right{
+    right:25px;
+}
+
+.counter{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-family:"Cinzel",serif;
+    font-size:14px;
+
+    background:rgba(0,0,0,.3);
+
+    padding:7px 15px;
+    border-radius:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(248,221,232,.25),
+                rgba(248,221,232,.9)
+            ),
+            url("images/corporativos/corporativo1.jpg");
+    }
+
+    .intro-container{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid,
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        height:70px;
+        position:absolute;
+        padding:0 5%;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .hero{
+        min-height:90vh;
+        padding:110px 7% 60px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .intro,
+    .services,
+    .galeria-section,
+    .process,
+    .contact{
+        padding:65px 7%;
+    }
+
+    .intro-text h2,
+    .section-title h2,
+    .contact h2{
+        font-size:30px;
+    }
+
+    .intro-image{
+        height:300px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:280px;
+    }
+
+    .lightbox{
+        padding:50px 15px;
+    }
+
+    .lightbox img{
+        max-width:95vw;
+        max-height:78vh;
+    }
+
+    .arrow{
+        width:42px;
+        height:42px;
+        font-size:27px;
+    }
+
+    .arrow.left{
+        left:10px;
+    }
+
+    .arrow.right{
+        right:10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        S&amp;S EVENTOS
+    </div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#sobre-nosotros">Nosotros</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            EVENTOS · ORGANIZACIÓN · EXPERIENCIAS
+        </div>
+
+        <h1>
+            Eventos<br>
+            Corporativos
+        </h1>
+
+        <p>
+            Creamos experiencias profesionales y memorables
+            para empresas, instituciones y equipos de trabajo.
+        </p>
+
+        <a href="#contacto" class="btn">
+            Cotiza tu evento
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="intro-container">
+
+        <div class="intro-image">
+
+            <img
+                src="images/corporativos/corporativo2.jpg"
+                alt="Eventos corporativos S&S Eventos"
+            >
+
+        </div>
+
+        <div class="intro-text">
+
+            <h2>
+                Eventos que representan tu empresa
+            </h2>
+
+            <p>
+                En <strong>S&amp;S Eventos</strong> organizamos
+                eventos corporativos pensados para crear
+                experiencias profesionales, elegantes y memorables.
+            </p>
+
+            <p>
+                Nos encargamos de la planificación, organización
+                y decoración de cada detalle, adaptándonos a la
+                identidad y necesidades de cada empresa.
+            </p>
+
+            <p>
+                Organizamos reuniones empresariales,
+                celebraciones, inauguraciones, aniversarios,
+                eventos institucionales y diferentes ocasiones
+                especiales para empresas y organizaciones.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICIOS -->
+
+<section class="services" id="servicios">
+
+    <div class="section-title">
+
+        <span>
+            LO QUE HACEMOS
+        </span>
+
+        <h2>
+            Nuestros servicios
+        </h2>
+
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+
+            <h3>
+                Organización
+            </h3>
+
+            <p>
+                Planificamos y coordinamos cada detalle
+                para que tu evento corporativo se desarrolle
+                de manera organizada y especial.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>
+                Decoración
+            </h3>
+
+            <p>
+                Creamos ambientes elegantes y personalizados
+                de acuerdo con la imagen y necesidades
+                de cada empresa.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>
+                Experiencia
+            </h3>
+
+            <p>
+                Convertimos cada evento en una experiencia
+                memorable para invitados, colaboradores
+                y clientes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALERÍA -->
+
+<section class="galeria-section" id="galeria">
+
+    <div class="section-title">
+
+        <span>
+            NUESTROS EVENTOS
+        </span>
+
+        <h2>
+            Eventos Corporativos
+        </h2>
+
+    </div>
+
+    <div class="gallery">
+
+        <div
+            class="gallery-item"
+            onclick="openGallery(0)"
+        >
+            <img
+                src="images/corporativos/corporativo2.jpg"
+                alt="Evento corporativo"
+            >
+        </div>
+
+        <div
+            class="gallery-item"
+            onclick="openGallery(1)"
+        >
+            <img
+                src="images/corporativos/corporativo3.jpg"
+                alt="Evento corporativo"
+            >
+        </div>
+
+        <div
+            class="gallery-item"
+            onclick="openGallery(2)"
+        >
+            <img
+                src="images/corporativos/corporativo4.jpg"
+                alt="Evento corporativo"
+            >
+        </div>
+
+        <div
+            class="gallery-item"
+            onclick="openGallery(3)"
+        >
+            <img
+                src="images/corporativos/corporativo5.jpg"
+                alt="Evento corporativo"
+            >
+        </div>
+
+        <div
+            class="gallery-item"
+            onclick="openGallery(4)"
+        >
+            <img
+                src="images/corporativos/corporativo6.jpg"
+                alt="Evento corporativo"
+            >
+        </div>
+
+        <div
+            class="gallery-item more-item"
+            onclick="openGallery(5)"
+        >
+
+            <img
+                src="images/corporativos/corporativo7.jpg"
+                alt="Más eventos corporativos"
+            >
+
+            <div class="more-content">
+
+                <div class="more-plus">
+                    +
+                </div>
+
+                <span>
+                    Ver más fotos
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESO -->
+
+<section class="process">
+
+    <div class="section-title">
+
+        <span>
+            CÓMO TRABAJAMOS
+        </span>
+
+        <h2>
+            Hacemos realidad tu evento
+        </h2>
+
+    </div>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Planificación
+            </h3>
+
+            <p>
+                Escuchamos tus ideas y conocemos las
+                necesidades de tu empresa para planificar
+                el evento.
+            </p>
+
+        </div>
+
+        <div class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                Diseño
+            </h3>
+
+            <p>
+                Creamos una propuesta de decoración y
+                ambientación acorde con la identidad
+                del evento.
+            </p>
+
+        </div>
+
+        <div class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Celebración
+            </h3>
+
+            <p>
+                Coordinamos cada detalle para que puedas
+                disfrutar de un evento organizado y especial.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+    <h2>
+        Planeemos tu evento corporativo
+    </h2>
+
+    <p>
+        Cuéntanos sobre tu empresa y el evento que tienes en mente.
+    </p>
+
+    <a
+        id="whatsappButton"
+        class="btn"
+        href="#"
+        target="_blank"
+    >
+        Escríbenos por WhatsApp
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 S&amp;S Eventos ·
+    Celebraciones que perduran
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    id="whatsappFloat"
+    class="whatsapp"
+    href="#"
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- LIGHTBOX -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeBackground(event)"
+>
+
+    <button
+        class="close"
+        onclick="closeGallery()"
+    >
+        ×
+    </button>
+
+    <button
+        class="arrow left"
+        onclick="previousPhoto(event)"
+    >
+        ‹
+    </button>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Galería de eventos corporativos"
+    >
+
+    <button
+        class="arrow right"
+        onclick="nextPhoto(event)"
+    >
+        ›
+    </button>
+
+    <div
+        class="counter"
+        id="counter"
+    >
+        1 / 15
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   WHATSAPP
+========================= */
+
+const numeroWhatsApp = "593995665348";
+
+const mensajeWhatsApp =
+"Hola, S&S Eventos. Me gustaría recibir información sobre la organización de un evento corporativo. ✨🏢";
+
+const enlaceWhatsApp =
+"https://wa.me/" +
+numeroWhatsApp +
+"?text=" +
+encodeURIComponent(mensajeWhatsApp);
+
+document.getElementById("whatsappButton").href =
+enlaceWhatsApp;
+
+document.getElementById("whatsappFloat").href =
+enlaceWhatsApp;
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+const fotos = [
+
+    "images/corporativos/corporativo2.jpg",
+    "images/corporativos/corporativo3.jpg",
+    "images/corporativos/corporativo4.jpg",
+    "images/corporativos/corporativo5.jpg",
+    "images/corporativos/corporativo6.jpg",
+    "images/corporativos/corporativo7.jpg",
+    "images/corporativos/corporativo8.jpg",
+    "images/corporativos/corporativo9.jpg",
+    "images/corporativos/corporativo10.jpg",
+    "images/corporativos/corporativo11.jpg",
+   
+
+];
+
+let currentPhoto = 0;
+
+
+/* ABRIR */
+
+function openGallery(index){
+
+    currentPhoto = index;
+
+    updateGallery();
+
+    document
+        .getElementById("lightbox")
+        .classList
+        .add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* ACTUALIZAR */
+
+function updateGallery(){
+
+    document.getElementById("lightboxImage").src =
+    fotos[currentPhoto];
+
+    document.getElementById("counter").textContent =
+    (currentPhoto + 1) + " / " + fotos.length;
+
+}
+
+
+/* SIGUIENTE */
+
+function nextPhoto(event){
+
+    if(event){
+        event.stopPropagation();
+    }
+
+    currentPhoto++;
+
+    if(currentPhoto >= fotos.length){
+        currentPhoto = 0;
+    }
+
+    updateGallery();
+
+}
+
+
+/* ANTERIOR */
+
+function previousPhoto(event){
+
+    if(event){
+        event.stopPropagation();
+    }
+
+    currentPhoto--;
+
+    if(currentPhoto < 0){
+        currentPhoto = fotos.length - 1;
+    }
+
+    updateGallery();
+
+}
+
+
+/* CERRAR */
+
+function closeGallery(){
+
+    document
+        .getElementById("lightbox")
+        .classList
+        .remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* FONDO */
+
+function closeBackground(event){
+
+    if(event.target.id === "lightbox"){
+        closeGallery();
+    }
+
+}
+
+
+/* =========================
+   TECLADO
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        const box =
+        document.getElementById("lightbox");
+
+        if(!box.classList.contains("active")){
+            return;
+        }
+
+        if(event.key === "Escape"){
+            closeGallery();
+        }
+
+        if(event.key === "ArrowRight"){
+            nextPhoto();
+        }
+
+        if(event.key === "ArrowLeft"){
+            previousPhoto();
+        }
+
+    }
+);
+
+
+/* =========================
+   SWIPE
+========================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const lightboxElement =
+document.getElementById("lightbox");
+
+lightboxElement.addEventListener(
+    "touchstart",
+    function(event){
+
+        touchStartX =
+        event.changedTouches[0].screenX;
+
+    },
+    {passive:true}
+);
+
+lightboxElement.addEventListener(
+    "touchend",
+    function(event){
+
+        touchEndX =
+        event.changedTouches[0].screenX;
+
+        const difference =
+        touchEndX - touchStartX;
+
+        if(Math.abs(difference) < 50){
+            return;
+        }
+
+        if(difference < 0){
+            nextPhoto();
+        }else{
+            previousPhoto();
+        }
+
+    },
+    {passive:true}
+);
+
+</script>
+
+</body>
+</html>
